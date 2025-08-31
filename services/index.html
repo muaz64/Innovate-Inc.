@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Our Services | Innovate Inc.</title>
     <meta name="description" content="Explore the comprehensive technology services offered by Innovate Inc., including custom software development, cloud solutions, and strategic IT consulting.">
     <meta name="keywords" content="technology services, software development services, cloud migration, IT consulting services, enterprise software, cloud infrastructure management, technology strategy, custom applications">
@@ -18,7 +18,7 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* --- NEW BLOB EFFECT STYLES --- */
+        /* --- BLOB EFFECT STYLES --- */
         .hero-bg {
             background-color: #f9fafb; /* bg-gray-50 */
             position: relative;
@@ -55,31 +55,6 @@
                 border-radius: 45% 55% 60% 40% / 55% 50% 50% 45%;
             }
         }
-        /* --- END NEW BLOB EFFECT STYLES --- */
-
-        /* --- FAQ Accordion Styling --- */
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-            padding: 0 1.25rem; /* p-5 for horizontal padding */
-        }
-
-        .faq-answer.open {
-            max-height: 500px; /* A large enough value to show content */
-            padding-top: 0;
-            padding-bottom: 1.25rem;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-        }
-
-        .faq-toggle-icon {
-            transition: transform 0.3s ease-out;
-        }
-
-        .faq-toggle-icon.open {
-            transform: rotate(180deg);
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -115,7 +90,7 @@
         <section class="hero-bg pt-16 pb-20">
             <div class="container mx-auto px-6 text-center relative z-10">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-                    Technology Services to <span class="text-indigo-600">Elevate Your Business</span>
+                    Our Comprehensive <span class="text-indigo-600">Technology Services</span>
                 </h1>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                     From concept to deployment, we provide end-to-end solutions designed to solve your most complex challenges and accelerate your growth.
@@ -124,135 +99,65 @@
         </section>
 
         <section class="py-20">
-            <div class="container mx-auto px-6 space-y-16">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <i class="fas fa-code text-5xl text-indigo-600 mb-4"></i>
-                        <h2 class="text-3xl font-bold text-gray-900">Custom Software Development</h2>
-                        <p class="mt-4 text-gray-600">
-                            We build scalable, secure, and high-performance applications tailored to your specific business requirements. Our agile development process ensures transparency and delivers value quickly, from web platforms to mobile apps.
-                        </p>
-                        <ul class="mt-4 space-y-2 text-gray-600 list-disc list-inside">
-                            <li>Full-Stack Web Application Development</li>
-                            <li>Native & Cross-Platform Mobile Apps</li>
-                            <li>UI/UX Design and Prototyping</li>
-                            <li>Legacy System Modernization</li>
-                        </ul>
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-center text-center">
+                    <div class="bg-indigo-100 text-indigo-600 p-4 rounded-full mb-6">
+                        <i class="fas fa-code text-4xl"></i>
                     </div>
-                    <div>
-                        <img src="https://placehold.co/600x400/e0e7ff/312e81?text=Code" alt="Illustration of code on a screen" class="rounded-lg shadow-xl w-full">
-                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Custom Software Development</h2>
+                    <p class="text-gray-600 mb-6 flex-grow">
+                        We build scalable, secure, and high-performance applications tailored to your specific business requirements. Our agile development process ensures transparency and delivers value quickly.
+                    </p>
+                    <ul class="text-gray-600 list-disc list-inside text-left mb-6 w-full">
+                        <li>Full-Stack Web Application Development</li>
+                        <li>Native & Cross-Platform Mobile Apps</li>
+                        <li>UI/UX Design and Prototyping</li>
+                        <li>Legacy System Modernization</li>
+                    </ul>
+                    <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block w-full">
+                        Inquire Now
+                    </a>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="md:order-2">
-                        <i class="fas fa-cloud-upload-alt text-5xl text-indigo-600 mb-4"></i>
-                        <h2 class="text-3xl font-bold text-gray-900">Cloud Solutions</h2>
-                        <p class="mt-4 text-gray-600">
-                            Unlock the full potential of the cloud. We help you design, implement, and manage a robust cloud infrastructure that is secure, scalable, and cost-effective. We are experts in AWS, Azure, and Google Cloud Platform.
-                        </p>
-                        <ul class="mt-4 space-y-2 text-gray-600 list-disc list-inside">
-                            <li>Cloud Strategy & Migration</li>
-                            <li>DevOps & CI/CD Automation</li>
-                            <li>Infrastructure as Code (IaC)</li>
-                            <li>Managed Cloud Services & Optimization</li>
-                        </ul>
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-center text-center">
+                    <div class="bg-indigo-100 text-indigo-600 p-4 rounded-full mb-6">
+                        <i class="fas fa-cloud-upload-alt text-4xl"></i>
                     </div>
-                    <div class="md:order-1">
-                        <img src="https://placehold.co/600x400/e0e7ff/312e81?text=Cloud" alt="Illustration of cloud computing" class="rounded-lg shadow-xl w-full">
-                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Cloud Solutions</h2>
+                    <p class="text-gray-600 mb-6 flex-grow">
+                        Unlock the full potential of the cloud. We help you design, implement, and manage a robust cloud infrastructure that is secure, scalable, and cost-effective.
+                    </p>
+                    <ul class="text-gray-600 list-disc list-inside text-left mb-6 w-full">
+                        <li>Cloud Strategy & Migration</li>
+                        <li>DevOps & CI/CD Automation</li>
+                        <li>Infrastructure as Code (IaC)</li>
+                        <li>Managed Cloud Services & Optimization</li>
+                    </ul>
+                    <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block w-full">
+                        Inquire Now
+                    </a>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <i class="fas fa-chart-line text-5xl text-indigo-600 mb-4"></i>
-                        <h2 class="text-3xl font-bold text-gray-900">IT Consulting</h2>
-                        <p class="mt-4 text-gray-600">
-                            Gain a competitive edge with strategic technology guidance. Our consultants work with you to create a technology roadmap that aligns with your business objectives, from digital transformation to cybersecurity strategy.
-                        </p>
-                        <ul class="mt-4 space-y-2 text-gray-600 list-disc list-inside">
-                            <li>Digital Transformation Strategy</li>
-                            <li>Technology Roadmap Planning</li>
-                            <li>Cybersecurity & Compliance Audits</li>
-                            <li>IT Infrastructure Assessment</li>
-                        </ul>
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-center text-center">
+                    <div class="bg-indigo-100 text-indigo-600 p-4 rounded-full mb-6">
+                        <i class="fas fa-chart-line text-4xl"></i>
                     </div>
-                    <div>
-                        <img src="https://placehold.co/600x400/e0e7ff/312e81?text=Strategy" alt="Illustration of a strategic plan" class="rounded-lg shadow-xl w-full">
-                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">IT Consulting</h2>
+                    <p class="text-gray-600 mb-6 flex-grow">
+                        Gain a competitive edge with strategic technology guidance. Our consultants work with you to create a technology roadmap that aligns with your business objectives.
+                    </p>
+                    <ul class="text-gray-600 list-disc list-inside text-left mb-6 w-full">
+                        <li>Digital Transformation Strategy</li>
+                        <li>Technology Roadmap Planning</li>
+                        <li>Cybersecurity & Compliance Audits</li>
+                        <li>IT Infrastructure Assessment</li>
+                    </ul>
+                    <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block w-full">
+                        Inquire Now
+                    </a>
                 </div>
-            </div>
-        </section>
 
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center mb-12">
-                       <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
-                       <p class="text-gray-500 mt-2">Find answers to common questions about our services.</p>
-                </div>
-                
-                <div class="max-w-3xl mx-auto mb-8">
-                    <div class="relative">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-500">
-                            <i class="fas fa-search"></i>
-                        </span>
-                        <input type="search" id="faq-search" class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 pl-12 pr-4 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Search for answers...">
-                    </div>
-                </div>
-                
-                <div id="faq-accordion-container" class="max-w-3xl mx-auto space-y-4">
-                    <div class="faq-item bg-gray-50 rounded-lg">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
-                            <span>What is the typical timeline for a custom software project?</span>
-                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
-                        </button>
-                        <div class="faq-answer">
-                            Project timelines vary based on complexity, but a typical project discovery and design phase takes 2-4 weeks, followed by development sprints of 2 weeks each. A small to medium-sized application can take anywhere from 3 to 6 months from start to launch.
-                        </div>
-                    </div>
-                    <div class="faq-item bg-gray-50 rounded-lg">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
-                            <span>How do you ensure the security of our data in the cloud?</span>
-                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
-                        </button>
-                        <div class="faq-answer">
-                            Security is our top priority. We follow industry best practices, including encryption at rest and in transit, regular security audits, and implementing least-privilege access controls. We are experienced with compliance standards like GDPR and HIPAA.
-                        </div>
-                    </div>
-                    <div class="faq-item bg-gray-50 rounded-lg">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
-                            <span>What does an IT consulting engagement look like?</span>
-                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
-                        </button>
-                        <div class="faq-answer">
-                            Our consulting process begins with a deep-dive discovery session to understand your business goals and challenges. We then conduct a thorough analysis of your current technology stack and deliver a strategic roadmap with actionable recommendations and a clear implementation plan.
-                        </div>
-                    </div>
-                    <div class="faq-item bg-gray-50 rounded-lg">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
-                            <span>Do you offer support after the project is launched?</span>
-                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
-                        </button>
-                        <div class="faq-answer">
-                            Yes, we offer ongoing support and maintenance packages to ensure your application remains secure, up-to-date, and performs optimally. We can tailor a support plan that fits your specific needs and budget.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20">
-            <div class="container mx-auto px-6 text-center">
-                   <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Have a Project in Mind or Need Support?</h2>
-                <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Whether you're ready to start a new project or need help with an existing one, our team is ready to assist. Let's connect and find the best solution for you.</p>
-                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                       <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block">
-                            Request a Quote
-                        </a>
-                        <a href="/contact/" class="bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-300 transition-transform duration-300 transform hover:scale-105 inline-block">
-                            Contact Support
-                        </a>
-                </div>
             </div>
         </section>
 
@@ -351,43 +256,6 @@
                     cookiePopup.classList.add('hidden');
                 });
             }
-            const faqContainer = document.getElementById('faq-accordion-container');
-    
-    if (faqContainer) {
-        const faqItems = faqContainer.querySelectorAll('.faq-item');
-
-        faqItems.forEach(item => {
-            const questionButton = item.querySelector('.faq-question');
-            const answerPanel = item.querySelector('.faq-answer');
-            const toggleIcon = questionButton.querySelector('.faq-toggle-icon');
-
-            questionButton.addEventListener('click', () => {
-                // Toggle the answer panel's visibility
-                answerPanel.classList.toggle('open');
-                
-                // Toggle the icon rotation
-                toggleIcon.classList.toggle('open');
-            });
-        });
-
-        // --- FAQ Search Filter Logic ---
-        const searchInput = document.getElementById('faq-search');
-        
-        searchInput.addEventListener('keyup', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-
-            faqItems.forEach(item => {
-                const questionText = item.querySelector('.faq-question span').textContent.toLowerCase();
-                const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
-                
-                if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    }
         });
     </script>
 </body>
