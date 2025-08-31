@@ -4,27 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & Metadata -->
     <title>Contact Us | Innovate Inc.</title>
     <meta name="description" content="Get in touch with the Innovate Inc. team. Whether you have a question about our services or want to start a project, we're here to help. Contact us today.">
     <meta name="keywords" content="contact innovate inc, get in touch, project inquiry, tech support, business partnership, IT services contact, software consultation, customer service">
     <link rel="canonical" href="https://www.innovate-inc-example.com/contact/">
     <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=I">
 
-    <!-- Tailwind CSS & Font Awesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-40 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-2xl font-bold text-gray-900">
@@ -43,7 +39,6 @@
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="/" class="block py-2 text-gray-600 hover:text-indigo-600">Home</a>
             <a href="/about/" class="block py-2 text-gray-600 hover:text-indigo-600">About Us</a>
@@ -53,24 +48,27 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="pt-24">
-        <section class="py-20">
+    <main class="pt-20"> <section class="bg-gray-900 text-white">
+            <div class="container mx-auto px-6 py-24 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Get in Touch</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">We're here to help and answer any question you might have. We look forward to hearing from you.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center">
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">Let's Talk</h1>
-                    <p class="mt-4 text-lg text-gray-600">We're excited to hear from you. Fill out the form below, and we'll get back to you as soon as possible.</p>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Send Us a Message</h2>
+                    <p class="mt-4 text-lg text-gray-600">Have a project in mind or just want to say hi? Fill out the form below and we'll get back to you as soon as possible.</p>
                 </div>
 
                 <div class="mt-12 max-w-2xl mx-auto">
-                    <!-- Form Submission Success Message -->
                     <div id="success-message" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative text-center" role="alert">
                         <strong class="font-bold">Thank you!</strong>
                         <span class="block sm:inline">Your message has been sent successfully. We'll be in touch soon.</span>
                         <button id="reset-form-button" class="mt-4 bg-green-600 text-white py-1 px-4 rounded-md hover:bg-green-700">Submit Another Response</button>
                     </div>
 
-                    <!-- Contact Form -->
                     <form id="contact-form" class="bg-white p-8 rounded-xl shadow-lg space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
@@ -93,9 +91,56 @@
                 </div>
             </div>
         </section>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Direct Contact Information</h2>
+                    <p class="mt-4 text-lg text-gray-600">Prefer to reach out directly? Here's how you can find us.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold text-gray-900">Our Office</h3>
+                            <p class="mt-2 text-base text-gray-600">123 Innovation Drive<br>Tech City, TX 75001</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold text-gray-900">Email Us</h3>
+                            <p class="mt-2 text-base text-gray-600">
+                                <a href="mailto:hello@innovate-inc-example.com" class="hover:text-indigo-600 transition-colors duration-300">hello@innovate.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600">
+                                <i class="fas fa-phone-alt text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold text-gray-900">Call Us</h3>
+                             <p class="mt-2 text-base text-gray-600">
+                                <a href="tel:+1234567890" class="hover:text-indigo-600 transition-colors duration-300">(123) 456-7890</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white">
         <div class="container mx-auto px-6 py-10">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -135,8 +180,7 @@
         </div>
     </footer>
 
-    <!-- Cookie Consent Popup -->
-   <div id="cookie-consent-popup" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
+    <div id="cookie-consent-popup" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-sm text-gray-300">
                 We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies. Read our <a href="/cookies/" class="underline hover:text-white font-semibold">Cookie Policy</a>.
@@ -152,7 +196,6 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Mobile Menu Handler ---
@@ -213,7 +256,7 @@
                     localStorage.setItem('form_submitted', 'true');
                     contactForm.classList.add('hidden');
                     if (successMessage) successMessage.classList.remove('hidden');
-                    window.scrollTo(0, 0); // Scroll to top to see message
+                    window.scrollTo(0, contactForm.offsetTop - 100); // Scroll to message
                 });
             }
 
@@ -231,4 +274,3 @@
     </script>
 </body>
 </html>
-
