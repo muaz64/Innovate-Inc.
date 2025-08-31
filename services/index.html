@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadata -->
+    <title>Our Services | Innovate Inc.</title>
+    <meta name="description" content="Explore the comprehensive technology services offered by Innovate Inc., including custom software development, cloud solutions, and strategic IT consulting.">
+    <meta name="keywords" content="technology services, software development services, cloud migration, IT consulting services, enterprise software, cloud infrastructure management, technology strategy, custom applications">
+    <link rel="canonical" href="https://www.innovate-inc-example.com/services/">
+    <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=I">
+
+    <!-- Tailwind CSS & Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-40 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-gray-900">
+                <i class="fas fa-rocket mr-2 text-indigo-600"></i>Innovate Inc.
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Home</a>
+                <a href="/about/" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">About Us</a>
+                <a href="/services/" class="text-indigo-600 hover:text-indigo-600 transition-colors duration-300 font-bold">Services</a>
+                <a href="/contact/" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Contact</a>
+            </nav>
+            <a href="/contact/" class="hidden md:inline-block bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105">
+                Get Started
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="/" class="block py-2 text-gray-600 hover:text-indigo-600">Home</a>
+            <a href="/about/" class="block py-2 text-gray-600 hover:text-indigo-600">About Us</a>
+            <a href="/services/" class="block py-2 text-indigo-600 font-semibold">Services</a>
+            <a href="/contact/" class="block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+            <a href="/contact/" class="block mt-2 bg-indigo-600 text-white text-center font-bold py-2 px-6 rounded-lg hover:bg-indigo-700">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="bg-white pt-16 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                    Technology Services to <span class="text-indigo-600">Elevate Your Business</span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    From concept to deployment, we provide end-to-end solutions designed to solve your most complex challenges and accelerate your growth.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Detailed Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 space-y-16">
+                <!-- Service 1: Custom Software -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <i class="fas fa-code text-5xl text-indigo-600 mb-4"></i>
+                        <h2 class="text-3xl font-bold text-gray-900">Custom Software Development</h2>
+                        <p class="mt-4 text-gray-600">
+                            We build scalable, secure, and high-performance applications tailored to your specific business requirements. Our agile development process ensures transparency and delivers value quickly, from web platforms to mobile apps.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-gray-600 list-disc list-inside">
+                            <li>Full-Stack Web Application Development</li>
+                            <li>Native & Cross-Platform Mobile Apps</li>
+                            <li>UI/UX Design and Prototyping</li>
+                            <li>Legacy System Modernization</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/e0e7ff/312e81?text=Code" alt="Illustration of code on a screen" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+
+                <!-- Service 2: Cloud Solutions -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="md:order-2">
+                        <i class="fas fa-cloud-upload-alt text-5xl text-indigo-600 mb-4"></i>
+                        <h2 class="text-3xl font-bold text-gray-900">Cloud Solutions</h2>
+                        <p class="mt-4 text-gray-600">
+                            Unlock the full potential of the cloud. We help you design, implement, and manage a robust cloud infrastructure that is secure, scalable, and cost-effective. We are experts in AWS, Azure, and Google Cloud Platform.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-gray-600 list-disc list-inside">
+                            <li>Cloud Strategy & Migration</li>
+                            <li>DevOps & CI/CD Automation</li>
+                            <li>Infrastructure as Code (IaC)</li>
+                            <li>Managed Cloud Services & Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="md:order-1">
+                        <img src="https://placehold.co/600x400/e0e7ff/312e81?text=Cloud" alt="Illustration of cloud computing" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+
+                <!-- Service 3: IT Consulting -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <i class="fas fa-chart-line text-5xl text-indigo-600 mb-4"></i>
+                        <h2 class="text-3xl font-bold text-gray-900">IT Consulting</h2>
+                        <p class="mt-4 text-gray-600">
+                           Gain a competitive edge with strategic technology guidance. Our consultants work with you to create a technology roadmap that aligns with your business objectives, from digital transformation to cybersecurity strategy.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-gray-600 list-disc list-inside">
+                            <li>Digital Transformation Strategy</li>
+                            <li>Technology Roadmap Planning</li>
+                            <li>Cybersecurity & Compliance Audits</li>
+                            <li>IT Infrastructure Assessment</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/e0e7ff/312e81?text=Strategy" alt="Illustration of a strategic plan" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Innovate Inc.</h3>
+                    <p class="text-gray-400">Driving Tomorrow's Technology Today.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul>
+                        <li><a href="/" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="/about/" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="/services/" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="/contact/" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Legal</h3>
+                    <ul>
+                        <li><a href="/privacy/" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms/" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="/cookies/" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-2xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i class="fab fa-github text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Innovate Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Popup -->
+    <div id="cookie-consent-popup" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-gray-300">
+                We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies. Read our <a href="/cookies/" class="underline hover:text-white font-semibold">Cookie Policy</a>.
+            </p>
+            <button id="accept-cookies" class="bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-300 flex-shrink-0">
+                Accept
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Handler ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // --- Cookie Consent Handler ---
+            const cookiePopup = document.getElementById('cookie-consent-popup');
+            const acceptCookiesButton = document.getElementById('accept-cookies');
+            const hasConsented = localStorage.getItem('cookie_consent_accepted');
+
+            if (!hasConsented && cookiePopup) {
+                cookiePopup.classList.remove('hidden');
+            }
+
+            if (acceptCookiesButton && cookiePopup) {
+                acceptCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem('cookie_consent_accepted', 'true');
+                    cookiePopup.classList.add('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
