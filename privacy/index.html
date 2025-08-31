@@ -145,14 +145,19 @@
     </footer>
 
     <!-- Cookie Consent Popup -->
-    <div id="cookie-consent-popup" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
+   <div id="cookie-consent-popup" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-sm text-gray-300">
                 We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies. Read our <a href="/cookies/" class="underline hover:text-white font-semibold">Cookie Policy</a>.
             </p>
-            <button id="accept-cookies" class="bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-300 flex-shrink-0">
-                Accept
-            </button>
+            <div class="flex flex-shrink-0 gap-4">
+                <button id="decline-cookies" class="bg-transparent border border-gray-400 text-gray-300 font-bold py-2 px-6 rounded-lg hover:bg-gray-700 hover:text-white transition-colors duration-300">
+                    Decline
+                </button>
+                <button id="accept-cookies" class="bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+                    Accept
+                </button>
+            </div>
         </div>
     </div>
 
@@ -168,21 +173,38 @@
                 });
             }
 
-            // --- Cookie Consent Handler ---
-            const cookiePopup = document.getElementById('cookie-consent-popup');
-            const acceptCookiesButton = document.getElementById('accept-cookies');
-            const hasConsented = localStorage.getItem('cookie_consent_accepted');
+                // --- Cookie Consent Handler (MODIFIED) ---
+    const cookiePopup = document.getElementById('cookie-consent-popup');
+    const acceptCookiesButton = document.getElementById('accept-cookies');
+    const declineCookiesButton = document.getElementById('decline-cookies'); // Get the new decline button
+    
+    // Check localStorage for either accepted or declined status
+    const hasAccepted = localStorage.getItem('cookie_consent_accepted');
+    const hasDeclined = localStorage.getItem('cookie_consent_declined');
 
-            if (!hasConsented && cookiePopup) {
-                cookiePopup.classList.remove('hidden');
-            }
+    // Only show the popup if no decision has been made
+    if (!hasAccepted && !hasDeclined && cookiePopup) {
+        setTimeout(() => {
+            cookiePopup.classList.remove('hidden');
+            cookiePopup.style.animation = 'fadeInUp 0.5s ease-out forwards';
+        }, 1500);
+    }
 
-            if (acceptCookiesButton && cookiePopup) {
-                acceptCookiesButton.addEventListener('click', () => {
-                    localStorage.setItem('cookie_consent_accepted', 'true');
-                    cookiePopup.classList.add('hidden');
-                });
-            }
+    // Add event listener for the Accept button
+    if (acceptCookiesButton && cookiePopup) {
+        acceptCookiesButton.addEventListener('click', () => {
+            localStorage.setItem('cookie_consent_accepted', 'true');
+            cookiePopup.classList.add('hidden');
+        });
+    }
+
+    // Add event listener for the Decline button
+    if (declineCookiesButton && cookiePopup) {
+        declineCookiesButton.addEventListener('click', () => {
+            localStorage.setItem('cookie_consent_declined', 'true');
+            cookiePopup.classList.add('hidden');
+        });
+    }
         });
     </script>
 </body>

@@ -79,6 +79,30 @@ body {
     transform: scale(1.05);
 }
 
+/* --- NEW: Testimonial Card Styling --- */
+.testimonial-card {
+    background-color: #ffffff; /* bg-white */
+    padding: 2rem;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-xl */
+}
+
+.testimonial-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 9999px; /* rounded-full */
+    object-fit: cover;
+    border: 3px solid #e0e7ff; /* border-indigo-200 */
+}
+
 
 /* --- Footer Links --- */
 .footer-link, .social-link {
