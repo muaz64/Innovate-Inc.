@@ -4,27 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & Metadata -->
     <title>Our Services | Innovate Inc.</title>
     <meta name="description" content="Explore the comprehensive technology services offered by Innovate Inc., including custom software development, cloud solutions, and strategic IT consulting.">
     <meta name="keywords" content="technology services, software development services, cloud migration, IT consulting services, enterprise software, cloud infrastructure management, technology strategy, custom applications">
     <link rel="canonical" href="https://www.innovate-inc-example.com/services/">
     <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=I">
 
-    <!-- Tailwind CSS & Font Awesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
+        /* --- NEW: FAQ Accordion Styling --- */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 1.25rem; /* p-5 for horizontal padding */
+}
+
+.faq-answer.open {
+    max-height: 500px; /* A large enough value to show content */
+    padding-top: 0;
+    padding-bottom: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.faq-toggle-icon {
+    transition: transform 0.3s ease-out;
+}
+
+.faq-toggle-icon.open {
+    transform: rotate(180deg);
+}
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-40 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-2xl font-bold text-gray-900">
@@ -43,7 +62,6 @@
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="/" class="block py-2 text-gray-600 hover:text-indigo-600">Home</a>
             <a href="/about/" class="block py-2 text-gray-600 hover:text-indigo-600">About Us</a>
@@ -53,9 +71,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="pt-24">
-        <!-- Hero Section -->
         <section class="bg-white pt-16 pb-20">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -67,10 +83,8 @@
             </div>
         </section>
 
-        <!-- Services Detailed Section -->
         <section class="py-20">
             <div class="container mx-auto px-6 space-y-16">
-                <!-- Service 1: Custom Software -->
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <i class="fas fa-code text-5xl text-indigo-600 mb-4"></i>
@@ -90,7 +104,6 @@
                     </div>
                 </div>
 
-                <!-- Service 2: Cloud Solutions -->
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="md:order-2">
                         <i class="fas fa-cloud-upload-alt text-5xl text-indigo-600 mb-4"></i>
@@ -110,7 +123,6 @@
                     </div>
                 </div>
 
-                <!-- Service 3: IT Consulting -->
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <i class="fas fa-chart-line text-5xl text-indigo-600 mb-4"></i>
@@ -132,9 +144,80 @@
             </div>
         </section>
 
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                     <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
+                     <p class="text-gray-500 mt-2">Find answers to common questions about our services.</p>
+                </div>
+                
+                <div class="max-w-3xl mx-auto mb-8">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-500">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="search" id="faq-search" class="w-full bg-gray-100 border border-gray-700 rounded-lg py-3 pl-12 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Search for answers...">
+                    </div>
+                </div>
+                
+                <div id="faq-accordion-container" class="max-w-3xl mx-auto space-y-4">
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
+                            <span>What is the typical timeline for a custom software project?</span>
+                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer ">
+                            Project timelines vary based on complexity, but a typical project discovery and design phase takes 2-4 weeks, followed by development sprints of 2 weeks each. A small to medium-sized application can take anywhere from 3 to 6 months from start to launch.
+                        </div>
+                    </div>
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
+                             <span>How do you ensure the security of our data in the cloud?</span>
+                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            Security is our top priority. We follow industry best practices, including encryption at rest and in transit, regular security audits, and implementing least-privilege access controls. We are experienced with compliance standards like GDPR and HIPAA.
+                        </div>
+                    </div>
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
+                             <span>What does an IT consulting engagement look like?</span>
+                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer ">
+                            Our consulting process begins with a deep-dive discovery session to understand your business goals and challenges. We then conduct a thorough analysis of your current technology stack and deliver a strategic roadmap with actionable recommendations and a clear implementation plan.
+                        </div>
+                    </div>
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
+                             <span>Do you offer support after the project is launched?</span>
+                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                           Yes, we offer ongoing support and maintenance packages to ensure your application remains secure, up-to-date, and performs optimally. We can tailor a support plan that fits your specific needs and budget.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Have a Project in Mind or Need Support?</h2>
+                <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Whether you're ready to start a new project or need help with an existing one, our team is ready to assist. Let's connect and find the best solution for you.</p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                     <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block">
+                        Request a Quote
+                    </a>
+                    <a href="/contact/" class="bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-300 transition-transform duration-300 transform hover:scale-105 inline-block">
+                        Contact Support
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white">
         <div class="container mx-auto px-6 py-10">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -169,12 +252,11 @@
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500">
-                <p>&copy; 2024 Innovate Inc. All Rights Reserved.</p>
+                <p>&copy; 2025 Innovate Inc. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Cookie Consent Popup -->
     <div id="cookie-consent-popup" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-sm text-gray-300">
@@ -190,7 +272,6 @@
             </div>
         </div>
     </div>
-    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Mobile Menu Handler ---
@@ -202,40 +283,72 @@
                 });
             }
 
-               // --- Cookie Consent Handler (MODIFIED) ---
-    const cookiePopup = document.getElementById('cookie-consent-popup');
-    const acceptCookiesButton = document.getElementById('accept-cookies');
-    const declineCookiesButton = document.getElementById('decline-cookies'); // Get the new decline button
+               // --- Cookie Consent Handler ---
+            const cookiePopup = document.getElementById('cookie-consent-popup');
+            const acceptCookiesButton = document.getElementById('accept-cookies');
+            const declineCookiesButton = document.getElementById('decline-cookies');
+            
+            const hasAccepted = localStorage.getItem('cookie_consent_accepted');
+            const hasDeclined = localStorage.getItem('cookie_consent_declined');
+
+            if (!hasAccepted && !hasDeclined && cookiePopup) {
+                setTimeout(() => {
+                    cookiePopup.classList.remove('hidden');
+                    cookiePopup.style.animation = 'fadeInUp 0.5s ease-out forwards';
+                }, 1500);
+            }
+
+            if (acceptCookiesButton && cookiePopup) {
+                acceptCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem('cookie_consent_accepted', 'true');
+                    cookiePopup.classList.add('hidden');
+                });
+            }
+
+            if (declineCookiesButton && cookiePopup) {
+                declineCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem('cookie_consent_declined', 'true');
+                    cookiePopup.classList.add('hidden');
+                });
+            }
+            const faqContainer = document.getElementById('faq-accordion-container');
     
-    // Check localStorage for either accepted or declined status
-    const hasAccepted = localStorage.getItem('cookie_consent_accepted');
-    const hasDeclined = localStorage.getItem('cookie_consent_declined');
+    if (faqContainer) {
+        const faqItems = faqContainer.querySelectorAll('.faq-item');
 
-    // Only show the popup if no decision has been made
-    if (!hasAccepted && !hasDeclined && cookiePopup) {
-        setTimeout(() => {
-            cookiePopup.classList.remove('hidden');
-            cookiePopup.style.animation = 'fadeInUp 0.5s ease-out forwards';
-        }, 1500);
-    }
+        faqItems.forEach(item => {
+            const questionButton = item.querySelector('.faq-question');
+            const answerPanel = item.querySelector('.faq-answer');
+            const toggleIcon = questionButton.querySelector('.faq-toggle-icon');
 
-    // Add event listener for the Accept button
-    if (acceptCookiesButton && cookiePopup) {
-        acceptCookiesButton.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent_accepted', 'true');
-            cookiePopup.classList.add('hidden');
+            questionButton.addEventListener('click', () => {
+                // Toggle the answer panel's visibility
+                answerPanel.classList.toggle('open');
+                
+                // Toggle the icon rotation
+                toggleIcon.classList.toggle('open');
+            });
         });
-    }
 
-    // Add event listener for the Decline button
-    if (declineCookiesButton && cookiePopup) {
-        declineCookiesButton.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent_declined', 'true');
-            cookiePopup.classList.add('hidden');
+        // --- FAQ Search Filter Logic ---
+        const searchInput = document.getElementById('faq-search');
+        
+        searchInput.addEventListener('keyup', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            faqItems.forEach(item => {
+                const questionText = item.querySelector('.faq-question span').textContent.toLowerCase();
+                const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
         });
     }
         });
     </script>
 </body>
 </html>
-
