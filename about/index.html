@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & Metadata -->
     <title>About Us | Innovate Inc.</title>
     <meta name="description" content="Learn about the story, mission, and team behind Innovate Inc. Discover our commitment to innovation, excellence, and building the future of technology.">
     <meta name="keywords" content="about innovate inc, our mission, tech company story, leadership team, company values, innovation culture, software development team, IT consulting experts">
     <link rel="canonical" href="https://www.innovate-inc-example.com/about/">
     <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=I">
 
-    <!-- Tailwind CSS & Font Awesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -24,7 +21,6 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-40 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-2xl font-bold text-gray-900">
@@ -43,7 +39,6 @@
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="/" class="block py-2 text-gray-600 hover:text-indigo-600">Home</a>
             <a href="/about/" class="block py-2 text-indigo-600 font-semibold">About Us</a>
@@ -53,9 +48,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="pt-24">
-        <!-- Hero Section -->
         <section class="bg-white pt-16 pb-20">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -67,7 +60,6 @@
             </div>
         </section>
 
-        <!-- Our Story Section -->
         <section class="py-20">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div class="prose max-w-none">
@@ -85,27 +77,49 @@
             </div>
         </section>
 
-        <!-- Team Section -->
         <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Core Values</h2>
+                    <p class="text-gray-600 mt-2">The principles that guide our work and culture.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-lightbulb text-4xl"></i></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Innovation</h3>
+                        <p class="text-gray-600">We constantly explore new ideas and technologies to deliver cutting-edge solutions that push boundaries and create new possibilities.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-shield-alt text-4xl"></i></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Integrity</h3>
+                        <p class="text-gray-600">We believe in transparency, honesty, and accountability. Our clients' trust is our most valuable asset, and we work hard to earn it every day.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-indigo-600 mb-4"><i class="fas fa-users text-4xl"></i></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Collaboration</h3>
+                        <p class="text-gray-600">We work as a true partner, not just a vendor. By fostering open communication, we achieve greater results together with our clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Meet Our Leaders</h2>
                     <p class="text-gray-600 mt-2">The architects of our success.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-                    <!-- Team Member 1 -->
                     <div class="text-center">
                         <img src="https://placehold.co/200x200/e0e7ff/312e81?text=CEO" alt="CEO Portrait" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-md">
                         <h3 class="text-xl font-bold text-gray-900">Jane Doe</h3>
                         <p class="text-indigo-600 font-medium">Chief Executive Officer</p>
                     </div>
-                    <!-- Team Member 2 -->
                     <div class="text-center">
                         <img src="https://placehold.co/200x200/e0e7ff/312e81?text=CTO" alt="CTO Portrait" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-md">
                         <h3 class="text-xl font-bold text-gray-900">John Smith</h3>
                         <p class="text-indigo-600 font-medium">Chief Technology Officer</p>
                     </div>
-                    <!-- Team Member 3 -->
                     <div class="text-center">
                         <img src="https://placehold.co/200x200/e0e7ff/312e81?text=COO" alt="COO Portrait" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-md">
                         <h3 class="text-xl font-bold text-gray-900">Emily Jones</h3>
@@ -114,9 +128,18 @@
                 </div>
             </div>
         </section>
+
+        <section class="bg-indigo-700">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Ready to Build Something Amazing?</h2>
+                <p class="text-indigo-200 mt-4 mb-8 max-w-2xl mx-auto">Let's turn your vision into reality. Partner with us to create a powerful, scalable, and innovative solution that drives your business forward.</p>
+                <a href="/contact/" class="bg-white text-indigo-700 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-100 transition-transform duration-300 transform hover:scale-105 inline-block">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white">
         <div class="container mx-auto px-6 py-10">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -151,12 +174,11 @@
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500">
-                <p>&copy; 2024 Innovate Inc. All Rights Reserved.</p>
+                <p>&copy; 2025 Innovate Inc. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Cookie Consent Popup -->
     <div id="cookie-consent-popup" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-sm text-gray-300">
@@ -173,7 +195,6 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Mobile Menu Handler ---
@@ -186,40 +207,38 @@
             }
 
                 // --- Cookie Consent Handler (MODIFIED) ---
-    const cookiePopup = document.getElementById('cookie-consent-popup');
-    const acceptCookiesButton = document.getElementById('accept-cookies');
-    const declineCookiesButton = document.getElementById('decline-cookies'); // Get the new decline button
-    
-    // Check localStorage for either accepted or declined status
-    const hasAccepted = localStorage.getItem('cookie_consent_accepted');
-    const hasDeclined = localStorage.getItem('cookie_consent_declined');
+            const cookiePopup = document.getElementById('cookie-consent-popup');
+            const acceptCookiesButton = document.getElementById('accept-cookies');
+            const declineCookiesButton = document.getElementById('decline-cookies'); // Get the new decline button
+            
+            // Check localStorage for either accepted or declined status
+            const hasAccepted = localStorage.getItem('cookie_consent_accepted');
+            const hasDeclined = localStorage.getItem('cookie_consent_declined');
 
-    // Only show the popup if no decision has been made
-    if (!hasAccepted && !hasDeclined && cookiePopup) {
-        setTimeout(() => {
-            cookiePopup.classList.remove('hidden');
-            cookiePopup.style.animation = 'fadeInUp 0.5s ease-out forwards';
-        }, 1500);
-    }
+            // Only show the popup if no decision has been made
+            if (!hasAccepted && !hasDeclined && cookiePopup) {
+                setTimeout(() => {
+                    cookiePopup.classList.remove('hidden');
+                    cookiePopup.style.animation = 'fadeInUp 0.5s ease-out forwards';
+                }, 1500);
+            }
 
-    // Add event listener for the Accept button
-    if (acceptCookiesButton && cookiePopup) {
-        acceptCookiesButton.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent_accepted', 'true');
-            cookiePopup.classList.add('hidden');
-        });
-    }
+            // Add event listener for the Accept button
+            if (acceptCookiesButton && cookiePopup) {
+                acceptCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem('cookie_consent_accepted', 'true');
+                    cookiePopup.classList.add('hidden');
+                });
+            }
 
-    // Add event listener for the Decline button
-    if (declineCookiesButton && cookiePopup) {
-        declineCookiesButton.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent_declined', 'true');
-            cookiePopup.classList.add('hidden');
-        });
-    }
+            // Add event listener for the Decline button
+            if (declineCookiesButton && cookiePopup) {
+                declineCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem('cookie_consent_declined', 'true');
+                    cookiePopup.classList.add('hidden');
+                });
+            }
         });
     </script>
 </body>
 </html>
-
-
