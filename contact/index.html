@@ -17,6 +17,39 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        /* --- NEW MESH GRADIENT BLOB EFFECT --- */
+        .hero-bg {
+            position: relative;
+            overflow: hidden;
+            background-color: #f3f4f6; /* bg-gray-100 fallback */
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: -100px;
+            background-image: 
+                radial-gradient(circle at 10% 20%, #c4b5fd, transparent 25%),
+                radial-gradient(circle at 80% 15%, #5470fa, transparent 25%),
+                radial-gradient(circle at 30% 90%, #db38f8, transparent 25%),
+                radial-gradient(circle at 90% 70%, #70eeff, transparent 25%);
+            background-size: 200% 200%;
+            z-index: 0;
+            filter: blur(100px);
+            opacity: 0.8;
+            animation: meshMove 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes meshMove {
+            from {
+                background-position: 0% 0%;
+            }
+            to {
+                background-position: 100% 100%;
+            }
+        }
+        /* --- END NEW BLOB EFFECT --- */
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -48,10 +81,11 @@
         </div>
     </header>
 
-    <main class="pt-20"> <section class="bg-gray-900 text-white">
-            <div class="container mx-auto px-6 py-24 text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Get in Touch</h1>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">We're here to help and answer any question you might have. We look forward to hearing from you.</p>
+    <main class="pt-20"> 
+        <section class="hero-bg">
+            <div class="container mx-auto px-6 py-24 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900">Get in Touch</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-700">We're here to help and answer any question you might have. We look forward to hearing from you.</p>
             </div>
         </section>
 
@@ -175,7 +209,7 @@
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500">
-                <p>&copy; 2024 Innovate Inc. All Rights Reserved.</p>
+                <p>&copy; 2025 Innovate Inc. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

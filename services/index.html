@@ -17,29 +17,69 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* --- NEW: FAQ Accordion Styling --- */
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-    padding: 0 1.25rem; /* p-5 for horizontal padding */
-}
 
-.faq-answer.open {
-    max-height: 500px; /* A large enough value to show content */
-    padding-top: 0;
-    padding-bottom: 1.25rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-}
+        /* --- NEW BLOB EFFECT STYLES --- */
+        .hero-bg {
+            background-color: #f9fafb; /* bg-gray-50 */
+            position: relative;
+            overflow: hidden;
+        }
 
-.faq-toggle-icon {
-    transition: transform 0.3s ease-out;
-}
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(45deg, #4f46e5, #14b8a6); /* Indigo to Teal gradient */
+            border-radius: 45% 55% 60% 40% / 55% 50% 50% 45%;
+            z-index: 0;
+            opacity: 0.15;
+            filter: blur(80px);
+            animation: waveMotion 25s infinite alternate ease-in-out;
+        }
+        
+        @keyframes waveMotion {
+            0% {
+                transform: translateX(-50%) translateY(-20%) rotate(0deg);
+                border-radius: 45% 55% 60% 40% / 55% 50% 50% 45%;
+            }
+            50% {
+                transform: translateX(-55%) translateY(0) rotate(10deg);
+                border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+            }
+            100% {
+                transform: translateX(-50%) translateY(-20%) rotate(0deg);
+                border-radius: 45% 55% 60% 40% / 55% 50% 50% 45%;
+            }
+        }
+        /* --- END NEW BLOB EFFECT STYLES --- */
 
-.faq-toggle-icon.open {
-    transform: rotate(180deg);
-}
+        /* --- FAQ Accordion Styling --- */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            padding: 0 1.25rem; /* p-5 for horizontal padding */
+        }
+
+        .faq-answer.open {
+            max-height: 500px; /* A large enough value to show content */
+            padding-top: 0;
+            padding-bottom: 1.25rem;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+
+        .faq-toggle-icon {
+            transition: transform 0.3s ease-out;
+        }
+
+        .faq-toggle-icon.open {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -72,8 +112,8 @@
     </header>
 
     <main class="pt-24">
-        <section class="bg-white pt-16 pb-20">
-            <div class="container mx-auto px-6 text-center">
+        <section class="hero-bg pt-16 pb-20">
+            <div class="container mx-auto px-6 text-center relative z-10">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
                     Technology Services to <span class="text-indigo-600">Elevate Your Business</span>
                 </h1>
@@ -128,7 +168,7 @@
                         <i class="fas fa-chart-line text-5xl text-indigo-600 mb-4"></i>
                         <h2 class="text-3xl font-bold text-gray-900">IT Consulting</h2>
                         <p class="mt-4 text-gray-600">
-                           Gain a competitive edge with strategic technology guidance. Our consultants work with you to create a technology roadmap that aligns with your business objectives, from digital transformation to cybersecurity strategy.
+                            Gain a competitive edge with strategic technology guidance. Our consultants work with you to create a technology roadmap that aligns with your business objectives, from digital transformation to cybersecurity strategy.
                         </p>
                         <ul class="mt-4 space-y-2 text-gray-600 list-disc list-inside">
                             <li>Digital Transformation Strategy</li>
@@ -147,8 +187,8 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center mb-12">
-                     <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
-                     <p class="text-gray-500 mt-2">Find answers to common questions about our services.</p>
+                       <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
+                       <p class="text-gray-500 mt-2">Find answers to common questions about our services.</p>
                 </div>
                 
                 <div class="max-w-3xl mx-auto mb-8">
@@ -156,7 +196,7 @@
                         <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-500">
                             <i class="fas fa-search"></i>
                         </span>
-                        <input type="search" id="faq-search" class="w-full bg-gray-100 border border-gray-700 rounded-lg py-3 pl-12 pr-4 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Search for answers...">
+                        <input type="search" id="faq-search" class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 pl-12 pr-4 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Search for answers...">
                     </div>
                 </div>
                 
@@ -166,13 +206,13 @@
                             <span>What is the typical timeline for a custom software project?</span>
                             <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer ">
+                        <div class="faq-answer">
                             Project timelines vary based on complexity, but a typical project discovery and design phase takes 2-4 weeks, followed by development sprints of 2 weeks each. A small to medium-sized application can take anywhere from 3 to 6 months from start to launch.
                         </div>
                     </div>
                     <div class="faq-item bg-gray-50 rounded-lg">
                         <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
-                             <span>How do you ensure the security of our data in the cloud?</span>
+                            <span>How do you ensure the security of our data in the cloud?</span>
                             <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
@@ -181,20 +221,20 @@
                     </div>
                     <div class="faq-item bg-gray-50 rounded-lg">
                         <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
-                             <span>What does an IT consulting engagement look like?</span>
+                            <span>What does an IT consulting engagement look like?</span>
                             <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
                         </button>
-                        <div class="faq-answer ">
+                        <div class="faq-answer">
                             Our consulting process begins with a deep-dive discovery session to understand your business goals and challenges. We then conduct a thorough analysis of your current technology stack and deliver a strategic roadmap with actionable recommendations and a clear implementation plan.
                         </div>
                     </div>
                     <div class="faq-item bg-gray-50 rounded-lg">
                         <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
-                             <span>Do you offer support after the project is launched?</span>
+                            <span>Do you offer support after the project is launched?</span>
                             <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <div class="faq-answer">
-                           Yes, we offer ongoing support and maintenance packages to ensure your application remains secure, up-to-date, and performs optimally. We can tailor a support plan that fits your specific needs and budget.
+                            Yes, we offer ongoing support and maintenance packages to ensure your application remains secure, up-to-date, and performs optimally. We can tailor a support plan that fits your specific needs and budget.
                         </div>
                     </div>
                 </div>
@@ -203,15 +243,15 @@
 
         <section class="py-20">
             <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Have a Project in Mind or Need Support?</h2>
+                   <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Have a Project in Mind or Need Support?</h2>
                 <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Whether you're ready to start a new project or need help with an existing one, our team is ready to assist. Let's connect and find the best solution for you.</p>
                 <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                     <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block">
-                        Request a Quote
-                    </a>
-                    <a href="/contact/" class="bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-300 transition-transform duration-300 transform hover:scale-105 inline-block">
-                        Contact Support
-                    </a>
+                       <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block">
+                            Request a Quote
+                        </a>
+                        <a href="/contact/" class="bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-300 transition-transform duration-300 transform hover:scale-105 inline-block">
+                            Contact Support
+                        </a>
                 </div>
             </div>
         </section>

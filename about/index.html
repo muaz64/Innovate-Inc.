@@ -9,14 +9,102 @@
     <meta name="keywords" content="about innovate inc, our mission, tech company story, leadership team, company values, innovation culture, software development team, IT consulting experts">
     <link rel="canonical" href="https://www.innovate-inc-example.com/about/">
     <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=I">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+   /* --- Base Styles & Fonts --- */
+body {
+    font-family: 'Inter', sans-serif; /* Assumes Inter is loaded, e.g., via Google Fonts */
+}
+
+/* New styles for the blob background */
+.hero-bg {
+    background-color: #f8fafc; /* Tailwind: bg-gray-50 */
+    position: relative; /* Needed for pseudo-elements positioning */
+    overflow: hidden; /* Ensures blob doesn't overflow */
+}
+
+/* --- NEW BLOB EFFECT STYLES --- */
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 70%;
+    height: 140%;
+    background: radial-gradient(circle at 30% 30%, #a5b4fc, #818cf8); /* Soft blue/indigo gradient */
+    border-radius: 70% 30% 50% 50% / 60% 40% 60% 40%; /* More organic, fluid shape */
+    transform: rotate(0deg);
+    z-index: 0;
+    opacity: 0.8;
+    animation: blobPulse 20s infinite alternate ease-in-out;
+    filter: blur(80px); /* Soften the edges significantly */
+}
+
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    right: -15%;
+    width: 60%;
+    height: 110%;
+    background: radial-gradient(circle at 70% 70%, #c4b5fd, #a78bfa); /* Softer purple/indigo gradient */
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; /* Another fluid shape */
+    transform: rotate(0deg);
+    z-index: 0;
+    opacity: 0.7;
+    animation: blobOrbit 25s infinite alternate-reverse ease-in-out; /* Reverse animation for contrast */
+    filter: blur(60px); /* Soften the edges */
+}
+
+/* NEW Animations for blobs */
+@keyframes blobPulse {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        border-radius: 70% 30% 50% 50% / 60% 40% 60% 40%;
+    }
+    25% {
+        transform: translate(10%, -10%) scale(1.08) rotate(10deg);
+        border-radius: 80% 20% 60% 40% / 70% 30% 70% 30%;
+    }
+    50% {
+        transform: translate(-5%, 5%) scale(0.95) rotate(-5deg);
+        border-radius: 60% 40% 40% 60% / 50% 50% 50% 50%;
+    }
+    75% {
+        transform: translate(8%, -8%) scale(1.03) rotate(12deg);
+        border-radius: 75% 25% 55% 45% / 65% 35% 65% 35%;
+    }
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        border-radius: 70% 30% 50% 50% / 60% 40% 60% 40%;
+    }
+}
+
+@keyframes blobOrbit {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    }
+    30% {
+        transform: translate(-12%, 8%) scale(1.05) rotate(15deg);
+        border-radius: 50% 50% 70% 30% / 80% 20% 80% 20%;
+    }
+    60% {
+        transform: translate(10%, -10%) scale(0.98) rotate(-10deg);
+        border-radius: 30% 70% 50% 50% / 60% 40% 60% 40%;
+    }
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    }
+}
+/* --- END NEW BLOB EFFECT STYLES --- */
+
+
+
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -49,8 +137,8 @@
     </header>
 
     <main class="pt-24">
-        <section class="bg-white pt-16 pb-20">
-            <div class="container mx-auto px-6 text-center">
+        <section class="hero-bg pt-16 pb-20">
+            <div class="container mx-auto px-6 text-center relative z-10">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
                     The Driving Force Behind <span class="text-indigo-600">Innovation</span>
                 </h1>
@@ -60,7 +148,7 @@
             </div>
         </section>
 
-        <section class="py-20">
+        <section class="py-20 ">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div class="prose max-w-none">
                     <h2 class="text-3xl font-bold text-gray-900">Our Story</h2>
@@ -77,7 +165,7 @@
             </div>
         </section>
 
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-white ">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Core Values</h2>
@@ -103,7 +191,7 @@
             </div>
         </section>
 
-        <section class="py-20 bg-gray-50">
+        <section class="py-20 bg-gray-50 ">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Meet Our Leaders</h2>
