@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadata -->
+    <title>Contact Us | Innovate Inc.</title>
+    <meta name="description" content="Get in touch with the Innovate Inc. team. Whether you have a question about our services or want to start a project, we're here to help. Contact us today.">
+    <meta name="keywords" content="contact innovate inc, get in touch, project inquiry, tech support, business partnership, IT services contact, software consultation, customer service">
+    <link rel="canonical" href="https://www.innovate-inc-example.com/contact/">
+    <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=I">
+
+    <!-- Tailwind CSS & Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-40 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-gray-900">
+                <i class="fas fa-rocket mr-2 text-indigo-600"></i>Innovate Inc.
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Home</a>
+                <a href="/about/" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">About Us</a>
+                <a href="/services/" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Services</a>
+                <a href="/contact/" class="text-indigo-600 hover:text-indigo-600 transition-colors duration-300 font-bold">Contact</a>
+            </nav>
+            <a href="/contact/" class="hidden md:inline-block bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105">
+                Get Started
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="/" class="block py-2 text-gray-600 hover:text-indigo-600">Home</a>
+            <a href="/about/" class="block py-2 text-gray-600 hover:text-indigo-600">About Us</a>
+            <a href="/services/" class="block py-2 text-gray-600 hover:text-indigo-600">Services</a>
+            <a href="/contact/" class="block py-2 text-indigo-600 font-semibold">Contact</a>
+            <a href="/contact/" class="block mt-2 bg-indigo-600 text-white text-center font-bold py-2 px-6 rounded-lg hover:bg-indigo-700">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">Let's Talk</h1>
+                    <p class="mt-4 text-lg text-gray-600">We're excited to hear from you. Fill out the form below, and we'll get back to you as soon as possible.</p>
+                </div>
+
+                <div class="mt-12 max-w-2xl mx-auto">
+                    <!-- Form Submission Success Message -->
+                    <div id="success-message" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative text-center" role="alert">
+                        <strong class="font-bold">Thank you!</strong>
+                        <span class="block sm:inline">Your message has been sent successfully. We'll be in touch soon.</span>
+                        <button id="reset-form-button" class="mt-4 bg-green-600 text-white py-1 px-4 rounded-md hover:bg-green-700">Submit Another Response</button>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="bg-white p-8 rounded-xl shadow-lg space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-300 text-lg">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Innovate Inc.</h3>
+                    <p class="text-gray-400">Driving Tomorrow's Technology Today.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul>
+                        <li><a href="/" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="/about/" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="/services/" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="/contact/" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Legal</h3>
+                    <ul>
+                        <li><a href="/privacy/" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms/" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="/cookies/" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-2xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i class="fab fa-github text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Innovate Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Popup -->
+    <div id="cookie-consent-popup" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-gray-300">
+                We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies. Read our <a href="/cookies/" class="underline hover:text-white font-semibold">Cookie Policy</a>.
+            </p>
+            <button id="accept-cookies" class="bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-300 flex-shrink-0">
+                Accept
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Handler ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // --- Cookie Consent Handler ---
+            const cookiePopup = document.getElementById('cookie-consent-popup');
+            const acceptCookiesButton = document.getElementById('accept-cookies');
+            const hasConsented = localStorage.getItem('cookie_consent_accepted');
+
+            if (!hasConsented && cookiePopup) {
+                cookiePopup.classList.remove('hidden');
+            }
+
+            if (acceptCookiesButton && cookiePopup) {
+                acceptCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem('cookie_consent_accepted', 'true');
+                    cookiePopup.classList.add('hidden');
+                });
+            }
+            
+            // --- Contact Form Handler ---
+            const contactForm = document.getElementById('contact-form');
+            const successMessage = document.getElementById('success-message');
+            const resetFormButton = document.getElementById('reset-form-button');
+
+            // Check if form was already submitted
+            if (localStorage.getItem('form_submitted') === 'true') {
+                if (contactForm) contactForm.classList.add('hidden');
+                if (successMessage) successMessage.classList.remove('hidden');
+            }
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault(); // Prevent actual form submission
+                    localStorage.setItem('form_submitted', 'true');
+                    contactForm.classList.add('hidden');
+                    if (successMessage) successMessage.classList.remove('hidden');
+                    window.scrollTo(0, 0); // Scroll to top to see message
+                });
+            }
+
+            if (resetFormButton) {
+                resetFormButton.addEventListener('click', () => {
+                    localStorage.removeItem('form_submitted');
+                    if (successMessage) successMessage.classList.add('hidden');
+                    if (contactForm) {
+                         contactForm.classList.remove('hidden');
+                         contactForm.reset(); // Clear form fields
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

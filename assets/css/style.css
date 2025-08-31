@@ -1,0 +1,133 @@
+/* --- Base Styles & Fonts --- */
+body {
+    font-family: 'Inter', sans-serif; /* Assumes Inter is loaded, e.g., via Google Fonts */
+}
+
+.hero-bg {
+    background-color: #f8fafc;
+}
+
+/* --- Navigation Styling --- */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #4b5563; /* text-gray-600 */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4f46e5; /* text-indigo-600 */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #4f46e5; /* text-indigo-600 */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-link.active {
+    font-weight: 700;
+    color: #4f46e5; /* text-indigo-600 */
+}
+
+
+/* --- Card Styling & Hover Effects --- */
+.feature-card {
+    background-color: #f9fafb; /* bg-gray-50 */
+    padding: 2rem;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-xl */
+}
+
+.pricing-card {
+    border: 1px solid #e5e7eb; /* border-gray-200 */
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-xl */
+}
+
+.pricing-card.popular {
+    position: relative;
+    border: 2px solid #4f46e5; /* border-indigo-600 */
+    transform: scale(1.05);
+}
+
+
+/* --- Footer Links --- */
+.footer-link, .social-link {
+    color: #9ca3af; /* text-gray-400 */
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover, .social-link:hover {
+    color: #ffffff; /* text-white */
+}
+
+
+/* --- Animation Keyframes --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Animation Utility Classes --- */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* --- Scroll Reveal Animations --- */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Apply scroll reveal to feature cards as well */
+.scroll-reveal .feature-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease; /* Keep hover transitions */
+}
+
+.scroll-reveal.visible .feature-card {
+    opacity: 1;
+    transform: translateY(0);
+}
