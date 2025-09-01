@@ -1,76 +1,122 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Our Services | Innovate Inc.</title>
-    <meta name="description" content="Explore the comprehensive technology services offered by Innovate Inc., including custom software development, cloud solutions, and strategic IT consulting.">
-    <meta name="keywords" content="technology services, software development services, cloud migration, IT consulting services, enterprise software, cloud infrastructure management, technology strategy, custom applications">
-    <link rel="canonical" href="https://www.innovate-inc-example.com/services/">
-    <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=I">
+    <meta name="description"
+        content="Explore the comprehensive technology services offered by Innovate Inc., including custom software development, cloud solutions, and strategic IT consulting." />
+    <meta name="keywords"
+        content="technology services, software development services, cloud migration, IT consulting services, enterprise software, cloud infrastructure management, technology strategy, custom applications" />
+    <link rel="canonical" href="https://www.innovate-inc-example.com/services/" />
+    <link rel="icon" href="https://placehold.co/32x32/000000/FFFFFF?text=I" />
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: "Inter", sans-serif;
         }
 
         /* --- BLOB EFFECT STYLES --- */
         .hero-bg {
-            background-color: #f9fafb; /* bg-gray-50 */
+            background-color: #f9fafb;
+            /* bg-gray-50 */
             position: relative;
             overflow: hidden;
         }
 
         .hero-bg::before {
-            content: '';
+            content: "";
             position: absolute;
             left: 50%;
             top: 0;
             transform: translateX(-50%);
             width: 200%;
             height: 100%;
-            background: linear-gradient(45deg, #4f46e5, #14b8a6); /* Indigo to Teal gradient */
+            background: linear-gradient(45deg, #4f46e5, #14b8a6);
+            /* Indigo to Teal gradient */
             border-radius: 45% 55% 60% 40% / 55% 50% 50% 45%;
             z-index: 0;
             opacity: 0.15;
             filter: blur(80px);
             animation: waveMotion 25s infinite alternate ease-in-out;
         }
-        
+
         @keyframes waveMotion {
             0% {
                 transform: translateX(-50%) translateY(-20%) rotate(0deg);
                 border-radius: 45% 55% 60% 40% / 55% 50% 50% 45%;
             }
+
             50% {
                 transform: translateX(-55%) translateY(0) rotate(10deg);
                 border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
             }
+
             100% {
                 transform: translateX(-50%) translateY(-20%) rotate(0deg);
                 border-radius: 45% 55% 60% 40% / 55% 50% 50% 45%;
             }
         }
+
+        /* --- FAQ Accordion Styling --- */
+
+        .faq-answer {
+            max-height: 0;
+
+            overflow: hidden;
+
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+
+            padding: 0 1.25rem;
+            /* p-5 for horizontal padding */
+        }
+
+        .faq-answer.open {
+            max-height: 500px;
+            /* A large enough value to show content */
+
+            padding-top: 0;
+
+            padding-bottom: 1.25rem;
+
+            padding-left: 1.25rem;
+
+            padding-right: 1.25rem;
+        }
+
+        .faq-toggle-icon {
+            transition: transform 0.3s ease-out;
+        }
+
+        .faq-toggle-icon.open {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
 
+<body class="bg-gray-50 text-gray-800">
     <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-40 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-2xl font-bold text-gray-900">
                 <i class="fas fa-rocket mr-2 text-indigo-600"></i>Innovate Inc.
             </a>
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="/" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Home</a>
-                <a href="/about/" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">About Us</a>
-                <a href="/services/" class="text-indigo-600 hover:text-indigo-600 transition-colors duration-300 font-bold">Services</a>
-                <a href="/contact/" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Contact</a>
+                <a href="/"
+                    class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Home</a>
+                <a href="/about/"
+                    class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">About Us</a>
+                <a href="/services/"
+                    class="text-indigo-600 hover:text-indigo-600 transition-colors duration-300 font-bold">Services</a>
+                <a href="/contact/"
+                    class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium">Contact</a>
             </nav>
-            <a href="/contact/" class="hidden md:inline-block bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105">
+            <a href="/contact/"
+                class="hidden md:inline-block bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105">
                 Get Started
             </a>
             <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
@@ -82,7 +128,9 @@
             <a href="/about/" class="block py-2 text-gray-600 hover:text-indigo-600 text-center">About Us</a>
             <a href="/services/" class="block py-2 text-indigo-600 font-semibold text-center">Services</a>
             <a href="/contact/" class="block py-2 text-gray-600 hover:text-indigo-600 text-center">Contact</a>
-            <a href="/contact/" class="block mt-2 bg-indigo-600 text-white text-center font-bold py-2 px-6 rounded-lg hover:bg-indigo-700">Get Started</a>
+            <a href="/contact/"
+                class="block mt-2 bg-indigo-600 text-white text-center font-bold py-2 px-6 rounded-lg hover:bg-indigo-700">Get
+                Started</a>
         </div>
     </header>
 
@@ -90,24 +138,31 @@
         <section class="hero-bg pt-16 pb-20">
             <div class="container mx-auto px-6 text-center relative z-10">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-                    Our Comprehensive <span class="text-indigo-600">Technology Services</span>
+                    Our Comprehensive
+                    <span class="text-indigo-600">Technology Services</span>
                 </h1>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    From concept to deployment, we provide end-to-end solutions designed to solve your most complex challenges and accelerate your growth.
+                    From concept to deployment, we provide end-to-end solutions designed
+                    to solve your most complex challenges and accelerate your growth.
                 </p>
             </div>
         </section>
 
         <section class="py-20">
             <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-center text-center">
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-center text-center">
                     <div class="bg-indigo-100 text-indigo-600 p-4 rounded-full mb-6">
                         <i class="fas fa-code text-4xl"></i>
                     </div>
-                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Custom Software Development</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                        Custom Software Development
+                    </h2>
                     <p class="text-gray-600 mb-6 flex-grow">
-                        We build scalable, secure, and high-performance applications tailored to your specific business requirements. Our agile development process ensures transparency and delivers value quickly.
+                        We build scalable, secure, and high-performance applications
+                        tailored to your specific business requirements. Our agile
+                        development process ensures transparency and delivers value
+                        quickly.
                     </p>
                     <ul class="text-gray-600 list-disc list-inside text-left mb-6 w-full">
                         <li>Full-Stack Web Application Development</li>
@@ -115,18 +170,24 @@
                         <li>UI/UX Design and Prototyping</li>
                         <li>Legacy System Modernization</li>
                     </ul>
-                    <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block w-full">
+                    <a href="/contact/"
+                        class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block w-full">
                         Inquire Now
                     </a>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-center text-center">
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-center text-center">
                     <div class="bg-indigo-100 text-indigo-600 p-4 rounded-full mb-6">
                         <i class="fas fa-cloud-upload-alt text-4xl"></i>
                     </div>
-                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Cloud Solutions</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                        Cloud Solutions
+                    </h2>
                     <p class="text-gray-600 mb-6 flex-grow">
-                        Unlock the full potential of the cloud. We help you design, implement, and manage a robust cloud infrastructure that is secure, scalable, and cost-effective.
+                        Unlock the full potential of the cloud. We help you design,
+                        implement, and manage a robust cloud infrastructure that is
+                        secure, scalable, and cost-effective.
                     </p>
                     <ul class="text-gray-600 list-disc list-inside text-left mb-6 w-full">
                         <li>Cloud Strategy & Migration</li>
@@ -134,18 +195,22 @@
                         <li>Infrastructure as Code (IaC)</li>
                         <li>Managed Cloud Services & Optimization</li>
                     </ul>
-                    <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block w-full">
+                    <a href="/contact/"
+                        class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block w-full">
                         Inquire Now
                     </a>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-center text-center">
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 flex flex-col items-center text-center">
                     <div class="bg-indigo-100 text-indigo-600 p-4 rounded-full mb-6">
                         <i class="fas fa-chart-line text-4xl"></i>
                     </div>
                     <h2 class="text-2xl font-bold text-gray-900 mb-3">IT Consulting</h2>
                     <p class="text-gray-600 mb-6 flex-grow">
-                        Gain a competitive edge with strategic technology guidance. Our consultants work with you to create a technology roadmap that aligns with your business objectives.
+                        Gain a competitive edge with strategic technology guidance. Our
+                        consultants work with you to create a technology roadmap that
+                        aligns with your business objectives.
                     </p>
                     <ul class="text-gray-600 list-disc list-inside text-left mb-6 w-full">
                         <li>Digital Transformation Strategy</li>
@@ -153,110 +218,306 @@
                         <li>Cybersecurity & Compliance Audits</li>
                         <li>IT Infrastructure Assessment</li>
                     </ul>
-                    <a href="/contact/" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block w-full">
+                    <a href="/contact/"
+                        class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block w-full">
                         Inquire Now
                     </a>
                 </div>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">
+                        Frequently Asked Questions
+                    </h2>
 
+                    <p class="text-gray-500 mt-2">
+                        Find answers to common questions about our services.
+                    </p>
+                </div>
+                <div class="max-w-3xl mx-auto mb-8">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-500">
+                            <i class="fas fa-search"></i>
+                        </span>
+
+                        <input type="search" id="faq-search"
+                            class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 pl-12 pr-4 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            placeholder="Search for answers..." />
+                    </div>
+                </div>
+                <div id="faq-accordion-container" class="max-w-3xl mx-auto space-y-4">
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button
+                            class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
+                            <span>What is the typical timeline for a custom software
+                                project?</span>
+
+                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Project timelines vary based on complexity, but a typical
+                            project discovery and design phase takes 2-4 weeks, followed by
+                            development sprints of 2 weeks each. A small to medium-sized
+                            application can take anywhere from 3 to 6 months from start to
+                            launch.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button
+                            class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
+                            <span>How do you ensure the security of our data in the
+                                cloud?</span>
+
+                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Security is our top priority. We follow industry best practices,
+                            including encryption at rest and in transit, regular security
+                            audits, and implementing least-privilege access controls. We are
+                            experienced with compliance standards like GDPR and HIPAA.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button
+                            class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
+                            <span>What does an IT consulting engagement look like?</span>
+
+                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Our consulting process begins with a deep-dive discovery session
+                            to understand your business goals and challenges. We then
+                            conduct a thorough analysis of your current technology stack and
+                            deliver a strategic roadmap with actionable recommendations and
+                            a clear implementation plan.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button
+                            class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold focus:outline-none">
+                            <span>Do you offer support after the project is launched?</span>
+
+                            <span class="faq-toggle-icon text-indigo-400"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Yes, we offer ongoing support and maintenance packages to ensure
+                            your application remains secure, up-to-date, and performs
+                            optimally. We can tailor a support plan that fits your specific
+                            needs and budget.
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-    </main>
+        <section class="py-20">
 
-     <footer class="bg-gray-900 text-white">
-    <div class="container mx-auto px-6 py-10">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-            <div class="col-span-1 md:col-span-1">
-                <h3 class="text-xl font-bold mb-4">Innovate Inc.</h3>
-                <p class="text-gray-400">Driving Tomorrow's Technology Today.</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="/" class="text-gray-400 hover:text-white">Home</a></li>
-                    <li><a href="/about/" class="text-gray-400 hover:text-white">About Us</a></li>
-                    <li><a href="/services/" class="text-gray-400 hover:text-white">Services</a></li>
-                    <li><a href="/contact/" class="text-gray-400 hover:text-white">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Legal</h3>
-                <ul class="space-y-2">
-                    <li><a href="/privacy/" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                    <li><a href="/terms/" class="text-gray-400 hover:text-white">Terms of Service</a></li>
-                    <li><a href="/cookies/" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Connect</h3>
-                <div class="flex space-x-4 justify-center md:justify-start">
-                    <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-2xl"></i></a>
-                    <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in text-2xl"></i></a>
-                    <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i class="fab fa-github text-2xl"></i></a>
+            <div class="container mx-auto px-6 text-center">
+
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Have a Project in Mind or Need Support?</h2>
+
+                <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Whether you're ready to start a new project or need help
+                    with an existing one, our team is ready to assist. Let's connect and find the best solution for you.
+                </p>
+
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+
+                    <a href="/contact/"
+                        class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-indigo-700 transition-transform duration-300 transform hover:scale-105 inline-block">
+
+                        Request a Quote
+
+                    </a>
+
+                    <a href="/contact/"
+                        class="bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-300 transition-transform duration-300 transform hover:scale-105 inline-block">
+
+                        Contact Support
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500">
-            <p>&copy; 2025 Innovate Inc. All Rights Reserved.</p>
-        </div>
-    </div>
-</footer>
+        </section>
+    </main>
 
-    <div id="cookie-consent-popup" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Innovate Inc.</h3>
+                    <p class="text-gray-400">Driving Tomorrow's Technology Today.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="/" class="text-gray-400 hover:text-white">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about/" class="text-gray-400 hover:text-white">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/services/" class="text-gray-400 hover:text-white">Services</a>
+                        </li>
+                        <li>
+                            <a href="/contact/" class="text-gray-400 hover:text-white">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="/privacy/" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="/terms/" class="text-gray-400 hover:text-white">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="/cookies/" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <div class="flex space-x-4 justify-center md:justify-start">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i
+                                class="fab fa-twitter text-2xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i
+                                class="fab fa-linkedin-in text-2xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white"><i
+                                class="fab fa-github text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Innovate Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-consent-popup"
+        class="hidden fixed bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm text-white p-6 z-50">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-sm text-gray-300">
-                We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies. Read our <a href="/cookies/" class="underline hover:text-white font-semibold">Cookie Policy</a>.
+                We use cookies to enhance your browsing experience and analyze our
+                traffic. By clicking "Accept", you consent to our use of cookies. Read
+                our
+                <a href="/cookies/" class="underline hover:text-white font-semibold">Cookie Policy</a>.
             </p>
             <div class="flex flex-shrink-0 gap-4">
-                <button id="decline-cookies" class="bg-transparent border border-gray-400 text-gray-300 font-bold py-2 px-6 rounded-lg hover:bg-gray-700 hover:text-white transition-colors duration-300">
+                <button id="decline-cookies"
+                    class="bg-transparent border border-gray-400 text-gray-300 font-bold py-2 px-6 rounded-lg hover:bg-gray-700 hover:text-white transition-colors duration-300">
                     Decline
                 </button>
-                <button id="accept-cookies" class="bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+                <button id="accept-cookies"
+                    class="bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
                     Accept
                 </button>
             </div>
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener("DOMContentLoaded", () => {
             // --- Mobile Menu Handler ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
             if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.addEventListener("click", () => {
+                    mobileMenu.classList.toggle("hidden");
                 });
             }
 
-               // --- Cookie Consent Handler ---
-            const cookiePopup = document.getElementById('cookie-consent-popup');
-            const acceptCookiesButton = document.getElementById('accept-cookies');
-            const declineCookiesButton = document.getElementById('decline-cookies');
-            
-            const hasAccepted = localStorage.getItem('cookie_consent_accepted');
-            const hasDeclined = localStorage.getItem('cookie_consent_declined');
+            // --- Cookie Consent Handler ---
+            const cookiePopup = document.getElementById("cookie-consent-popup");
+            const acceptCookiesButton = document.getElementById("accept-cookies");
+            const declineCookiesButton = document.getElementById("decline-cookies");
+
+            const hasAccepted = localStorage.getItem("cookie_consent_accepted");
+            const hasDeclined = localStorage.getItem("cookie_consent_declined");
 
             if (!hasAccepted && !hasDeclined && cookiePopup) {
                 setTimeout(() => {
-                    cookiePopup.classList.remove('hidden');
-                    cookiePopup.style.animation = 'fadeInUp 0.5s ease-out forwards';
+                    cookiePopup.classList.remove("hidden");
+                    cookiePopup.style.animation = "fadeInUp 0.5s ease-out forwards";
                 }, 1500);
             }
 
             if (acceptCookiesButton && cookiePopup) {
-                acceptCookiesButton.addEventListener('click', () => {
-                    localStorage.setItem('cookie_consent_accepted', 'true');
-                    cookiePopup.classList.add('hidden');
+                acceptCookiesButton.addEventListener("click", () => {
+                    localStorage.setItem("cookie_consent_accepted", "true");
+                    cookiePopup.classList.add("hidden");
                 });
             }
 
             if (declineCookiesButton && cookiePopup) {
-                declineCookiesButton.addEventListener('click', () => {
-                    localStorage.setItem('cookie_consent_declined', 'true');
-                    cookiePopup.classList.add('hidden');
+                declineCookiesButton.addEventListener("click", () => {
+                    localStorage.setItem("cookie_consent_declined", "true");
+                    cookiePopup.classList.add("hidden");
                 });
+            }
+
+            const faqContainer = document.getElementById('faq-accordion-container');
+            if (faqContainer) {
+
+                const faqItems = faqContainer.querySelectorAll('.faq-item');
+
+                faqItems.forEach(item => {
+
+                    const questionButton = item.querySelector('.faq-question');
+
+                    const answerPanel = item.querySelector('.faq-answer');
+
+                    const toggleIcon = questionButton.querySelector('.faq-toggle-icon');
+                    questionButton.addEventListener('click', () => {
+
+                        // Toggle the answer panel's visibility
+
+                        answerPanel.classList.toggle('open');
+
+                        // Toggle the icon rotation
+
+                        toggleIcon.classList.toggle('open');
+
+                    });
+
+                });
+                // --- FAQ Search Filter Logic ---
+
+                const searchInput = document.getElementById('faq-search');
+
+                searchInput.addEventListener('keyup', (e) => {
+
+                    const searchTerm = e.target.value.toLowerCase();
+
+                    faqItems.forEach(item => {
+                        const questionText = item.querySelector('.faq-question span').textContent.toLowerCase();
+                        const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+                        if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                            item.style.display = 'block';
+
+                        } else {
+
+                            item.style.display = 'none';
+
+                        }
+
+                    });
+
+                });
+
             }
         });
     </script>
 </body>
+
 </html>
